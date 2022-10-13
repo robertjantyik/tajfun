@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="frontpage/fragments/tajfunLayout.html :: tajfunLayout(~{::title}, ~{::#content}, ~{})">
+
+<head>
+    <title>Tájfun Billiárd</title>
+</head>
+
+<body>
+
+<section id="content">
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex align-items-center">
+        <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h1>Üdvözöljük a <span>TÁJFUN</span>nál</h1>
+                    <h2>Billiárdszalon és étterem</h2>
+
+                    <div class="btns">
+                        <a href="#menu" class="btn-menu animated fadeInUp scrollto">Étterem</a>
+                        <!-- <a href="#book-a-table" class="btn-book animated fadeInUp scrollto">Book a Table</a> -->
+                    </div>
+                </div>
+                <!-- <div class="col-lg-4 d-flex align-items-center justify-content-center position-relative" data-aos="zoom-in" data-aos-delay="200"> -->
+                <!-- <a href="https://www.youtube.com/watch?v=u6BOC7CDUTQ" class="glightbox play-btn"></a> -->
+                <!-- </div> -->
+
+            </div>
+        </div>
+    </section><!-- End Hero -->
+
+    <main id="main">
+
+        <!-- ======= About Section ======= -->
+        <section id="about" class="about">
+            <div class="container" data-aos="fade-up">
+                <div class="section-title">
+                    <h2>Rólunk</h2>
+                    <p>Ismerjen meg minket</p>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="about-img">
+                            <img src="../../static/assets/img/tajfun_billiard.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+                        <h3>Tájfun Biliárdszalon és étterem.</h3>
+                        <p class="fst-italic">
+                            2005. December 16-án újra, megújult formájában megnyitotta kapuit a <strong
+                                style="color:#f46f32">Tájfun Biliárdszalon és étterem</strong>.
+                        </p>
+                        <ul>
+                            <li><i class="bi bi-check-circle"></i> 11 db Centurion pool asztal.</li>
+                            <li><i class="bi bi-check-circle"></i> 14 db Metró 9' pool asztal.</li>
+                            <li><i class="bi bi-check-circle"></i> 6 db Snooker asztal.</li>
+                        </ul>
+                        <p>Összesen 31 db asztallal várjuk a biliárdozni vágyókat közel 1200 m²-en.</p>
+                        <p>
+                            Mindezek mellett lehetőség nyílik darts-ozni, csocsózni vagy akár az óriás kivetítőn végig
+                            követni a BL, EL, Forma-1, MotoGP, Nfl mérkőzéseket.
+                            Az emeleten lévő étteremben pedig lehetőséget ad születésnapok és egyéb akár céges rendezvények
+                            lebonyolításához.
+                            Otthont adott már videó klip forgatásnak, fotózásnak, különböző biliárd versenyek
+                            lebonyolításának.
+                            Cégünk különböző szórakoztató gépek bérbeadásával is foglalkozik (csocsó, biliárdasztal, darts
+                            gépek, tájfun-léghoki, boxgép, auto szimulátor, flipper, taco-ball, kalapácsos
+                            erőmérőgép).Vállaljuk rendezvényekhez a szórakoztató gépek telepítését(szállítással együtt),
+                            illetve vendéglátósok részére közös üzemeltetés és bérbeadás konstrukcióját tudjuk felajánlani.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End About Section -->
+        <!--
+             ======= Why Us Section =======
+            <section id="why-us" class="why-us">
+                <div class="container" data-aos="fade-up">
+
+                    <div class="section-title">
+                        <h2>Why Us</h2>
+                        <p>Why Choose Our Restaurant</p>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-lg-4">
+                            <div class="box" data-aos="zoom-in" data-aos-delay="100">
+                                <span>01</span>
+                                <h4>Lorem Ipsum</h4>
+                                <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero
+                                    placeat</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 mt-4 mt-lg-0">
+                            <div class="box" data-aos="zoom-in" data-aos-delay="200">
+                                <span>02</span>
+                                <h4>Repellat Nihil</h4>
+                                <p>Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire
+                                    leno para dest</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 mt-4 mt-lg-0">
+                            <div class="box" data-aos="zoom-in" data-aos-delay="300">
+                                <span>03</span>
+                                <h4> Ad ad velit qui</h4>
+                                <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam
+                                    quis</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section> End Why Us Section -->
+
+        <!-- ======= Menu Section ======= -->
+        <section id="menu" class="menu section-bg">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>Étterem</h2>
+                    <p>Tekintse meg éttermi kínálatunkat</p>
+                </div>
+
+                <div class="row" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-lg-12 d-flex justify-content-center">
+                        <ul id="menu-flters">
+                            <li data-filter="*" class="filter-active">Összes</li>
+                            <li data-filter=".filter-starters">Levesek</li>
+                            <li data-filter=".filter-salads">Előételek</li>
+                            <li data-filter=".filter-specialty">Saláták</li>
+                            <li data-filter=".filter-specialty">Főételek</li>
+                            <li data-filter=".filter-specialty">Halak</li>
+                            <li data-filter=".filter-specialty">Desszertek</li>
+                            <li data-filter=".filter-specialty">Pizzák (32 cm)</li>
+                            <li data-filter=".filter-specialty">Pizzák (45 cm)</li>
+                            <li data-filter=".filter-specialty">Köretek</li>
+                            <li data-filter=".filter-specialty">Savanyúságok</li>
+                            <li data-filter=".filter-specialty">Üdítők</li>
+                            <li data-filter=".filter-specialty">Sörök / Borok</li>
+                            <li data-filter=".filter-specialty">Energiaital</li>
+                            <li data-filter=".filter-specialty">Öntetek, szószok</li>
+                            <li data-filter=".filter-specialty">Egyéb</li>
+                            <li data-filter=".filter-specialty">Extra köret</li>
+                            <li data-filter=".filter-specialty">Pezsgők</li>
+                            <li data-filter=".filter-specialty">Rövid italok</li>
+
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
+
+                    <div class="col-lg-6 menu-item filter-starters">
+                        <img src="../../static/assets/img/menu/lobster-bisque.jpg" class="menu-img" alt="">
+                        <div class="menu-content">
+                            <a href="#">Lobster Bisque</a><span>$5.95</span>
+                        </div>
+                        <div class="menu-ingredients">
+                            Lorem, deren, trataro, filede, nerada
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 menu-item filter-specialty">
+                        <img src="../../static/assets/img/menu/bread-barrel.jpg" class="menu-img" alt="">
+                        <div class="menu-content">
+                            <a href="#">Bread Barrel</a><span>$6.95</span>
+                        </div>
+                        <div class="menu-ingredients">
+                            Lorem, deren, trataro, filede, nerada
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 menu-item filter-starters">
+                        <img src="../../static/assets/img/menu/cake.jpg" class="menu-img" alt="">
+                        <div class="menu-content">
+                            <a href="#">Crab Cake</a><span>$7.95</span>
+                        </div>
+                        <div class="menu-ingredients">
+                            A delicate crab cake served on a toasted roll with lettuce and tartar sauce
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 menu-item filter-salads">
+                        <img src="../../static/assets/img/menu/caesar.jpg" class="menu-img" alt="">
+                        <div class="menu-content">
+                            <a href="#">Caesar Selections</a><span>$8.95</span>
+                        </div>
+                        <div class="menu-ingredients">
+                            Lorem, deren, trataro, filede, nerada
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 menu-item filter-specialty">
+                        <img src="../../static/assets/img/menu/tuscan-grilled.jpg" class="menu-img" alt="">
+                        <div class="menu-content">
+                            <a href="#">Tuscan Grilled</a><span>$9.95</span>
+                        </div>
+                        <div class="menu-ingredients">
+                            Grilled chicken with provolone, artichoke hearts, and roasted red pesto
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 menu-item filter-starters">
+                        <img src="../../static/assets/img/menu/mozzarella.jpg" class="menu-img" alt="">
+                        <div class="menu-content">
+                            <a href="#">Mozzarella Stick</a><span>$4.95</span>
+                        </div>
+                        <div class="menu-ingredients">
+                            Lorem, deren, trataro, filede, nerada
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 menu-item filter-salads">
+                        <img src="../../static/assets/img/menu/greek-salad.jpg" class="menu-img" alt="">
+                        <div class="menu-content">
+                            <a href="#">Greek Salad</a><span>$9.95</span>
+                        </div>
+                        <div class="menu-ingredients">
+                            Fresh spinach, crisp romaine, tomatoes, and Greek olives
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 menu-item filter-salads">
+                        <img src="../../static/assets/img/menu/spinach-salad.jpg" class="menu-img" alt="">
+                        <div class="menu-content">
+                            <a href="#">Spinach Salad</a><span>$9.95</span>
+                        </div>
+                        <div class="menu-ingredients">
+                            Fresh spinach with mushrooms, hard boiled egg, and warm bacon vinaigrette
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 menu-item filter-specialty">
+                        <img src="../../static/assets/img/menu/lobster-roll.jpg" class="menu-img" alt="">
+                        <div class="menu-content">
+                            <a href="#">Lobster Roll</a><span>$12.95</span>
+                        </div>
+                        <div class="menu-ingredients">
+                            Plump lobster meat, mayo and crisp lettuce on a toasted bulky roll
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Menu Section -->
+
+        <!-- ======= Specials Section ======= -->
+        <section id="specials" class="specials">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>Akció</h2>
+                    <p>Állandó akcióink</p>
+                </div>
+
+                <div class="row" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-lg-3">
+                        <ul class="nav nav-tabs flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Takarékos Hétfő és
+                                    Kedd</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#tab-2">Hétvégi Koktél akció</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-9 mt-4 mt-lg-0">
+                        <div class="tab-content">
+                            <div class="tab-pane active show" id="tab-1">
+                                <div class="row">
+                                    <div class="col-lg-8 details order-2 order-lg-1">
+                                        <h3>Minden hétfőn és kedden a következő akciókkal várjuk Önöket:</h3>
+                                        <p>Biliárd asztal <strong style="color:#f46f32">1190.-/óra </strong> (17:00 után)
+                                        </p>
+                                        <h4>Csapolt söreink:</h4>
+                                        <p>Staropramen korsó 690.- helyett <strong style="color:#f46f32"> 550.-</strong></p>
+                                        <p>Stella artois korsó 650.- helyett <strong style="color:#f46f32"> 490.-</strong>
+                                        </p>
+                                        <p>Borsodi korsó 590.- <strong style="color:#f46f32"> helyett 450.-</strong></p>
+                                        <p>Staropramen korsó 690.- helyett <strong style="color:#f46f32"> 550.-</strong></p>
+                                        <h4>Pizzáink:</h4>
+                                        <p>Akciós Pizzáink ezen a napon <strong style="color:#f46f32"> 1990.-</strong></p>
+                                    </div>
+                                    <div class="col-lg-4 text-center order-1 order-lg-2">
+                                        <img src="../../static/assets/img/specials-1.png" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tab-2">
+                                <div class="row">
+                                    <div class="col-lg-8 details order-2 order-lg-1">
+                                        <h3>Minden péntek, szombat és vasárnap egész nap</h3>
+
+                                        <p><strong style="color:#f46f32">Kettőt</strong> fizet <strong
+                                                style="color:#f46f32">hármat</strong> kap a hetenként változó kínálatból.
+                                        </p>
+                                    </div>
+                                    <div class="col-lg-4 text-center order-1 order-lg-2">
+                                        <img src="../../static/assets/img/specials-2.png" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End Specials Section -->
+
+        <!-- ======= Events Section ======= -->
+        <!-- <section id="events" class="events"> -->
+        <!-- <div class="container" data-aos="fade-up"> -->
+
+        <!-- <div class="section-title"> -->
+        <!-- <h2>Events</h2> -->
+        <!-- <p>Organize Your Events in our Restaurant</p> -->
+        <!-- </div> -->
+
+        <!-- <div class="events-slider swiper" data-aos="fade-up" data-aos-delay="100"> -->
+        <!-- <div class="swiper-wrapper"> -->
+
+        <!-- <div class="swiper-slide"> -->
+        <!-- <div class="row event-item"> -->
+        <!-- <div class="col-lg-6"> -->
+        <!-- <img src="assets/img/event-birthday.jpg" class="img-fluid" alt=""> -->
+        <!-- </div> -->
+        <!-- <div class="col-lg-6 pt-4 pt-lg-0 content"> -->
+        <!-- <h3>Birthday Parties</h3> -->
+        <!-- <div class="price"> -->
+        <!-- <p><span>$189</span></p> -->
+        <!-- </div> -->
+        <!-- <p class="fst-italic"> -->
+        <!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore -->
+        <!-- magna aliqua. -->
+        <!-- </p> -->
+        <!-- <ul> -->
+        <!-- <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li> -->
+        <!-- <li><i class="bi bi-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li> -->
+        <!-- <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li> -->
+        <!-- </ul> -->
+        <!-- <p> -->
+        <!-- Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate -->
+        <!-- velit esse cillum dolore eu fugiat nulla pariatur -->
+        <!-- </p> -->
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- </div> End testimonial item -->
+
+        <!-- <div class="swiper-slide"> -->
+        <!-- <div class="row event-item"> -->
+        <!-- <div class="col-lg-6"> -->
+        <!-- <img src="assets/img/event-private.jpg" class="img-fluid" alt=""> -->
+        <!-- </div> -->
+        <!-- <div class="col-lg-6 pt-4 pt-lg-0 content"> -->
+        <!-- <h3>Private Parties</h3> -->
+        <!-- <div class="price"> -->
+        <!-- <p><span>$290</span></p> -->
+        <!-- </div> -->
+        <!-- <p class="fst-italic"> -->
+        <!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore -->
+        <!-- magna aliqua. -->
+        <!-- </p> -->
+        <!-- <ul> -->
+        <!-- <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li> -->
+        <!-- <li><i class="bi bi-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li> -->
+        <!-- <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li> -->
+        <!-- </ul> -->
+        <!-- <p> -->
+        <!-- Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate -->
+        <!-- velit esse cillum dolore eu fugiat nulla pariatur -->
+        <!-- </p> -->
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- </div> End testimonial item -->
+
+        <!-- <div class="swiper-slide"> -->
+        <!-- <div class="row event-item"> -->
+        <!-- <div class="col-lg-6"> -->
+        <!-- <img src="assets/img/event-custom.jpg" class="img-fluid" alt=""> -->
+        <!-- </div> -->
+        <!-- <div class="col-lg-6 pt-4 pt-lg-0 content"> -->
+        <!-- <h3>Custom Parties</h3> -->
+        <!-- <div class="price"> -->
+        <!-- <p><span>$99</span></p> -->
+        <!-- </div> -->
+        <!-- <p class="fst-italic"> -->
+        <!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore -->
+        <!-- magna aliqua. -->
+        <!-- </p> -->
+        <!-- <ul> -->
+        <!-- <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li> -->
+        <!-- <li><i class="bi bi-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li> -->
+        <!-- <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li> -->
+        <!-- </ul> -->
+        <!-- <p> -->
+        <!-- Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate -->
+        <!-- velit esse cillum dolore eu fugiat nulla pariatur -->
+        <!-- </p> -->
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- </div> End testimonial item -->
+
+        <!-- </div> -->
+        <!-- <div class="swiper-pagination"></div> -->
+        <!-- </div> -->
+
+        <!-- </div> -->
+        <!-- </section> End Events Section -->
+
+        <!-- ======= Book A Table Section ======= -->
+        <!-- <section id="book-a-table" class="book-a-table"> -->
+        <!-- <div class="container" data-aos="fade-up"> -->
+
+        <!-- <div class="section-title"> -->
+        <!-- <h2>Reservation</h2> -->
+        <!-- <p>Book a Table</p> -->
+        <!-- </div> -->
+
+        <!-- <form action="forms/book-a-table.php" method="post" role="form" class="php-email-form" data-aos="fade-up" data-aos-delay="100"> -->
+        <!-- <div class="row"> -->
+        <!-- <div class="col-lg-4 col-md-6 form-group"> -->
+        <!-- <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars"> -->
+        <!-- <div class="validate"></div> -->
+        <!-- </div> -->
+        <!-- <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0"> -->
+        <!-- <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email"> -->
+        <!-- <div class="validate"></div> -->
+        <!-- </div> -->
+        <!-- <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0"> -->
+        <!-- <input type="text" class="form-control" name="phone" id="phone" placeholder="Your Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars"> -->
+        <!-- <div class="validate"></div> -->
+        <!-- </div> -->
+        <!-- <div class="col-lg-4 col-md-6 form-group mt-3"> -->
+        <!-- <input type="text" name="date" class="form-control" id="date" placeholder="Date" data-rule="minlen:4" data-msg="Please enter at least 4 chars"> -->
+        <!-- <div class="validate"></div> -->
+        <!-- </div> -->
+        <!-- <div class="col-lg-4 col-md-6 form-group mt-3"> -->
+        <!-- <input type="text" class="form-control" name="time" id="time" placeholder="Time" data-rule="minlen:4" data-msg="Please enter at least 4 chars"> -->
+        <!-- <div class="validate"></div> -->
+        <!-- </div> -->
+        <!-- <div class="col-lg-4 col-md-6 form-group mt-3"> -->
+        <!-- <input type="number" class="form-control" name="people" id="people" placeholder="# of people" data-rule="minlen:1" data-msg="Please enter at least 1 chars"> -->
+        <!-- <div class="validate"></div> -->
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- <div class="form-group mt-3"> -->
+        <!-- <textarea class="form-control" name="message" rows="5" placeholder="Message"></textarea> -->
+        <!-- <div class="validate"></div> -->
+        <!-- </div> -->
+        <!-- <div class="mb-3"> -->
+        <!-- <div class="loading">Loading</div> -->
+        <!-- <div class="error-message"></div> -->
+        <!-- <div class="sent-message">Your booking request was sent. We will call back or send an Email to confirm your reservation. Thank you!</div> -->
+        <!-- </div> -->
+        <!-- <div class="text-center"><button type="submit">Book a Table</button></div> -->
+        <!-- </form> -->
+
+        <!-- </div> -->
+        <!-- </section> End Book A Table Section -->
+
+        <!-- ======= Testimonials Section ======= -->
+        <!-- <section id="testimonials" class="testimonials section-bg"> -->
+        <!-- <div class="container" data-aos="fade-up"> -->
+
+        <!-- <div class="section-title"> -->
+        <!-- <h2>Testimonials</h2> -->
+        <!-- <p>What they're saying about us</p> -->
+        <!-- </div> -->
+
+        <!-- <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100"> -->
+        <!-- <div class="swiper-wrapper"> -->
+
+        <!-- <div class="swiper-slide"> -->
+        <!-- <div class="testimonial-item"> -->
+        <!-- <p> -->
+        <!-- <i class="bx bxs-quote-alt-left quote-icon-left"></i> -->
+        <!-- Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper. -->
+        <!-- <i class="bx bxs-quote-alt-right quote-icon-right"></i> -->
+        <!-- </p> -->
+        <!-- <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt=""> -->
+        <!-- <h3>Saul Goodman</h3> -->
+        <!-- <h4>Ceo &amp; Founder</h4> -->
+        <!-- </div> -->
+        <!-- </div> End testimonial item -->
+
+        <!-- <div class="swiper-slide"> -->
+        <!-- <div class="testimonial-item"> -->
+        <!-- <p> -->
+        <!-- <i class="bx bxs-quote-alt-left quote-icon-left"></i> -->
+        <!-- Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa. -->
+        <!-- <i class="bx bxs-quote-alt-right quote-icon-right"></i> -->
+        <!-- </p> -->
+        <!-- <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt=""> -->
+        <!-- <h3>Sara Wilsson</h3> -->
+        <!-- <h4>Designer</h4> -->
+        <!-- </div> -->
+        <!-- </div> End testimonial item -->
+
+        <!-- <div class="swiper-slide"> -->
+        <!-- <div class="testimonial-item"> -->
+        <!-- <p> -->
+        <!-- <i class="bx bxs-quote-alt-left quote-icon-left"></i> -->
+        <!-- Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim. -->
+        <!-- <i class="bx bxs-quote-alt-right quote-icon-right"></i> -->
+        <!-- </p> -->
+        <!-- <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt=""> -->
+        <!-- <h3>Jena Karlis</h3> -->
+        <!-- <h4>Store Owner</h4> -->
+        <!-- </div> -->
+        <!-- </div>End testimonial item -->
+
+        <!-- <div class="swiper-slide"> -->
+        <!-- <div class="testimonial-item"> -->
+        <!-- <p> -->
+        <!-- <i class="bx bxs-quote-alt-left quote-icon-left"></i> -->
+        <!-- Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam. -->
+        <!-- <i class="bx bxs-quote-alt-right quote-icon-right"></i> -->
+        <!-- </p> -->
+        <!-- <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt=""> -->
+        <!-- <h3>Matt Brandon</h3> -->
+        <!-- <h4>Freelancer</h4> -->
+        <!-- </div> -->
+        <!-- </div> End testimonial item -->
+
+        <!-- <div class="swiper-slide"> -->
+        <!-- <div class="testimonial-item"> -->
+        <!-- <p> -->
+        <!-- <i class="bx bxs-quote-alt-left quote-icon-left"></i> -->
+        <!-- Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid. -->
+        <!-- <i class="bx bxs-quote-alt-right quote-icon-right"></i> -->
+        <!-- </p> -->
+        <!-- <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt=""> -->
+        <!-- <h3>John Larson</h3> -->
+        <!-- <h4>Entrepreneur</h4> -->
+        <!-- </div> -->
+        <!-- </div> End testimonial item -->
+
+        <!-- </div> -->
+        <!-- <div class="swiper-pagination"></div> -->
+        <!-- </div> -->
+
+        <!-- </div> -->
+        <!-- </section> End Testimonials Section -->
+
+        <!-- ======= Gallery Section ======= -->
+        <section id="gallery" class="gallery">
+
+            <div class="container" data-aos="fade-up">
+                <div class="section-title">
+                    <h2>Galéria</h2>
+                    <p>Tekintse meg a szalonunkról készült képeket</p>
+                </div>
+            </div>
+
+            <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="row g-0">
+
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item">
+                            <a href="../../static/assets/img/gallery/tajfun_galery_1.jpg" class="gallery-lightbox"
+                               data-gall="gallery-item">
+                                <img src="../../static/assets/img/gallery/tajfun_galery_1.jpg" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item">
+                            <a href="../../static/assets/img/gallery/tajfun_galery_2.jpg" class="gallery-lightbox"
+                               data-gall="gallery-item">
+                                <img src="../../static/assets/img/gallery/tajfun_galery_2.jpg" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item">
+                            <a href="../../static/assets/img/gallery/tajfun_galery_3.jpg" class="gallery-lightbox"
+                               data-gall="gallery-item">
+                                <img src="../../static/assets/img/gallery/tajfun_galery_3.jpg" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item">
+                            <a href="../../static/assets/img/gallery/tajfun_galery_4.jpg" class="gallery-lightbox"
+                               data-gall="gallery-item">
+                                <img src="../../static/assets/img/gallery/tajfun_galery_4.jpg" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item">
+                            <a href="../../static/assets/img/gallery/tajfun_galery_5.jpg" class="gallery-lightbox"
+                               data-gall="gallery-item">
+                                <img src="../../static/assets/img/gallery/tajfun_galery_5.jpg" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item">
+                            <a href="../../static/assets/img/gallery/tajfun_galery_6.jpg" class="gallery-lightbox"
+                               data-gall="gallery-item">
+                                <img src="../../static/assets/img/gallery/tajfun_galery_6.jpg" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item">
+                            <a href="../../static/assets/img/gallery/tajfun_galery_7.jpg" class="gallery-lightbox"
+                               data-gall="gallery-item">
+                                <img src="../../static/assets/img/gallery/tajfun_galery_7.jpg" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item">
+                            <a href="../../static/assets/img/gallery/tajfun_galery_8.jpg" class="gallery-lightbox"
+                               data-gall="gallery-item">
+                                <img src="../../static/assets/img/gallery/tajfun_galery_8.jpg" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Gallery Section -->
+
+        <!-- ======= Chefs Section ======= -->
+        <!-- <section id="chefs" class="chefs"> -->
+        <!-- <div class="container" data-aos="fade-up"> -->
+
+        <!-- <div class="section-title"> -->
+        <!-- <h2>Chefs</h2> -->
+        <!-- <p>Our Proffesional Chefs</p> -->
+        <!-- </div> -->
+
+        <!-- <div class="row"> -->
+
+        <!-- <div class="col-lg-4 col-md-6"> -->
+        <!-- <div class="member" data-aos="zoom-in" data-aos-delay="100"> -->
+        <!-- <img src="assets/img/chefs/chefs-1.jpg" class="img-fluid" alt=""> -->
+        <!-- <div class="member-info"> -->
+        <!-- <div class="member-info-content"> -->
+        <!-- <h4>Walter White</h4> -->
+        <!-- <span>Master Chef</span> -->
+        <!-- </div> -->
+        <!-- <div class="social"> -->
+        <!-- <a href=""><i class="bi bi-twitter"></i></a> -->
+        <!-- <a href=""><i class="bi bi-facebook"></i></a> -->
+        <!-- <a href=""><i class="bi bi-instagram"></i></a> -->
+        <!-- <a href=""><i class="bi bi-linkedin"></i></a> -->
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- </div> -->
+
+        <!-- <div class="col-lg-4 col-md-6"> -->
+        <!-- <div class="member" data-aos="zoom-in" data-aos-delay="200"> -->
+        <!-- <img src="assets/img/chefs/chefs-2.jpg" class="img-fluid" alt=""> -->
+        <!-- <div class="member-info"> -->
+        <!-- <div class="member-info-content"> -->
+        <!-- <h4>Sarah Jhonson</h4> -->
+        <!-- <span>Patissier</span> -->
+        <!-- </div> -->
+        <!-- <div class="social"> -->
+        <!-- <a href=""><i class="bi bi-twitter"></i></a> -->
+        <!-- <a href=""><i class="bi bi-facebook"></i></a> -->
+        <!-- <a href=""><i class="bi bi-instagram"></i></a> -->
+        <!-- <a href=""><i class="bi bi-linkedin"></i></a> -->
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- </div> -->
+
+        <!-- <div class="col-lg-4 col-md-6"> -->
+        <!-- <div class="member" data-aos="zoom-in" data-aos-delay="300"> -->
+        <!-- <img src="assets/img/chefs/chefs-3.jpg" class="img-fluid" alt=""> -->
+        <!-- <div class="member-info"> -->
+        <!-- <div class="member-info-content"> -->
+        <!-- <h4>William Anderson</h4> -->
+        <!-- <span>Cook</span> -->
+        <!-- </div> -->
+        <!-- <div class="social"> -->
+        <!-- <a href=""><i class="bi bi-twitter"></i></a> -->
+        <!-- <a href=""><i class="bi bi-facebook"></i></a> -->
+        <!-- <a href=""><i class="bi bi-instagram"></i></a> -->
+        <!-- <a href=""><i class="bi bi-linkedin"></i></a> -->
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- </div> -->
+
+        <!-- </div> -->
+
+        <!-- </div> -->
+        <!-- </section> End Chefs Section -->
+
+        <!-- ======= Contact Section ======= -->
+        <section id="contact" class="contact">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>Kapcsolat</h2>
+                    <p>Elérhetőségeink</p>
+                </div>
+            </div>
+
+            <div data-aos="fade-up">
+                <iframe style="border:0; width: 100%; height: 350px;"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2694.6890622825117!2d19.111537015627395!3d47.51544637917872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741db64254d0629%3A0x612189ef49a12773!2sT%C3%A1jfun%20Billiard%20Saloon%20and%20Restaurant!5e0!3m2!1sen!2shu!4v1665061836927!5m2!1sen!2shu"
+                        frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <div class="container" data-aos="fade-up">
+
+                <div class="info">
+                    <div class="row">
+                        <div class="col">
+                            <div class="address" style="margin-top:40px">
+                                <i class="bi bi-geo-alt"></i>
+                                <h4>Cím:</h4>
+                                <p>1145. Budapest, Szugló u. 65</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="open-hours">
+                                <i class="bi bi-clock"></i>
+                                <h4>Nyitva tartás</h4>
+                                <p>
+                                    Hétfő-Vasárnap<br>
+                                    10:00- 23:00
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="email">
+                                <i class="bi bi-envelope"></i>
+                                <h4>Email:</h4>
+                                <p>info@tajfunbiliard.hu</p>
+                            </div>
+                        </div>
+
+                        <div class="col" >
+                            <div class="phone">
+                                <i class="bi bi-phone"></i>
+                                <h4>Telefon:</h4>
+                                <p> 06-1-220-01-15</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+
+            <!-- <div class="col-lg-8 mt-5 mt-lg-0"> -->
+
+            <!-- <form action="forms/contact.php" method="post" role="form" class="php-email-form"> -->
+            <!-- <div class="row"> -->
+            <!-- <div class="col-md-6 form-group"> -->
+            <!-- <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required> -->
+            <!-- </div> -->
+            <!-- <div class="col-md-6 form-group mt-3 mt-md-0"> -->
+            <!-- <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required> -->
+            <!-- </div> -->
+            <!-- </div> -->
+            <!-- <div class="form-group mt-3"> -->
+            <!-- <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required> -->
+            <!-- </div> -->
+            <!-- <div class="form-group mt-3"> -->
+            <!-- <textarea class="form-control" name="message" rows="8" placeholder="Message" required></textarea> -->
+            <!-- </div> -->
+            <!-- <div class="my-3"> -->
+            <!-- <div class="loading">Loading</div> -->
+            <!-- <div class="error-message"></div> -->
+            <!-- <div class="sent-message">Your message has been sent. Thank you!</div> -->
+            <!-- </div> -->
+            <!-- <div class="text-center"><button type="submit">Send Message</button></div> -->
+            <!-- </form> -->
+
+            <!-- </div> -->
+
+            </div>
+
+            </div>
+        </section><!-- End Contact Section -->
+
+    </main><!-- End #main -->
+</section>
+
+</body>
+
+</html>
