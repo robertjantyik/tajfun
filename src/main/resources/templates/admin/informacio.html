@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="fragments/layout/asamiLayout.html :: asamiLayout(~{::title}, ~{::#content}, ~{::#scripts})">
+<title>Admin - Tartalom</title>
+<div id="content">
+    <div class="row mt-3 mb-3">
+        <div class="col">
+            <div class="card" id="collapsible_obj_0">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col">
+                            <h3>Tájékoztató üzenet</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Megszólítás:</span>
+                        </div>
+                        <input th:value="${informacio.getTitle}" id="megszolitas" type="text" class="form-control" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Tartalom:</span>
+                        </div>
+                        <textarea th:text="${informacio.szoveg}" style="min-height: 100px" id="szoveg" class="form-control" aria-label="With textarea"></textarea>
+                    </div>
+                    <button id="informacioMentesButton" class="postgomb btn btn-sm btn-success float-left"><span><i class="fas fa-check mr-3 ml-2"></i></span><span>Tájékoztató üzenet kihelyezése az oldalra</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col">
+            <div class="card">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col">
+                            <h3>Covid-19 tájékoztató üzenet</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Megszólítás:</span>
+                        </div>
+                        <input th:value="${covidtajekoztato.getTitle}" id="CovidMegszolitas" type="text" class="form-control" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Tartalom:</span>
+                        </div>
+                        <textarea th:text="${covidtajekoztato.szoveg}" style="min-height: 100px" id="CovidSzoveg" class="form-control" aria-label="With textarea"></textarea>
+                    </div>
+                    <button id="covidSaveButton" class="postgomb btn btn-sm btn-success float-left"><span><i class="fas fa-check mr-3 ml-2"></i></span><span>Covid-19 tájékoztató üzenet kihelyezése az oldalra</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col">
+            <div class="card">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col">
+                            <h3>Tudnivalók üzenet</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Megszólítás:</span>
+                        </div>
+                        <input th:value="${tudnivalok.getTitle}" id="TudnivalokMegszolitas" type="text" class="form-control" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Tartalom:</span>
+                        </div>
+                        <textarea th:text="${tudnivalok.szoveg}" style="min-height: 100px" id="TudnivalokSzoveg" class="form-control" aria-label="With textarea"></textarea>
+                    </div>
+                    <button id="tudnivalokSaveButton" class="postgomb btn btn-sm btn-success float-left"><span><i class="fas fa-check mr-3 ml-2"></i></span><span>Tudnivalók üzenet kihelyezése az oldalra</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="scripts">
+    <script th:src="@{/js/admin/informacio.js}"></script>
+</div>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="fragments/layout/asamiLayout.html :: asamiLayout(~{::title}, ~{::#content}, ~{::#scripts})">
+<title>Admin - Étlap</title>
+<div id="content">
+  <div class="row mt-3">
+    <div class="col">
+      <div class="card">
+        <div class="card-header">
+          <h3>Ételek</h3>
+        </div>
+        <div class="card-body">
+          <div class="row mb-3">
+            <div class="col">
+              <button id="newEtelButton" class="btn btn-sm btn-success mb-2"><span><i
+                      class="fas fa-plus-square ml-2 mr-2 "></i></span><span>Új étel hozzáadása</span></button>
+              <button id="editEtelButton" class="btn btn-sm btn-warning mb-2"><span><i
+                      class="fas fa-edit ml-2 mr-2"></i></span><span>Étel szerkesztése</span></button>
+              <button id="deleteEtelButton" class="btn btn-sm mb-2 mr-2 btn-danger"><span><i
+                      class="fas fa-trash-alt mr-2 ml-2"></i></span><span>Étel törlése</span></button>
+            </div>
+          </div>
+          <div class="row" style="height:750px">
+            <div class="col">
+              <div id="etelGrid"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header">
+          <h3>Kategóriák</h3>
+        </div>
+        <div class="card-body">
+          <div class="row mb-3">
+            <div class="col">
+              <button id="newKatButton" class="btn btn-sm btn-success mb-2" data-toggle="modal" data-target="#kategoriaForm"><span><i
+                      class="fas fa-plus-square ml-2 mr-2 "></i></span><span>Új kategória hozzáadása</span></button>
+              <button id="editKatButton" class="btn btn-sm btn-warning mb-2"><span><i
+                      class="fas fa-edit ml-2 mr-2"></i></span><span>Kategória szerkesztése</span></button>
+              <button id="deleteKatButton" class="btn btn-sm mr-2 mb-2 btn-danger"><span><i
+                      class="fas fa-trash-alt mr-2 ml-2"></i></span><span>Kategória törlése</span></button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div id="katGrid"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <th:block th:replace="fragments/modal.html :: modal(etelForm, ~{::#etelFormTitle}, ~{::#etelFormContent}, ~{::#etelFormFooter})">
+    <div id="etelFormTitle">
+      <h3>Étel Szerkesztése</h3>
+    </div>
+    <div id="etelFormContent" class="card-body">
+      <form id="etelFormA">
+        <input type="hidden" id="etelId" name="etelId"/>
+        <input type="hidden" id="etelKategoriaNev" name="etelKategoriaNev"/>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <label class="input-group-text">Étel neve:</label>
+          </div>
+          <input id="etelNev" name="etelNev" type="text" class="form-control" aria-describedby="basic-addon1" required>
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <label class="input-group-text">Étel leírása:</label>
+          </div>
+          <input id="etelMegjegyzes" name="etelMegjegyzes" type="text" class="form-control" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="etelKategoria">Étel kategóriája:</label>
+          </div>
+          <select class="custom-select" id="etelKategoria" name="etelKategoria" required>
+            <option selected disabled value="">Kérjük válasszon!</option>
+          </select>
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <label class="input-group-text">Étel elsődleges ára:</label>
+          </div>
+          <input id="etelAr" name="etelAr" min="1" max="999999" type="number" class="form-control" aria-describedby="basic-addon1"
+                 required>
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <label class="input-group-text">Étel féladag ára:</label>
+          </div>
+          <input id="etelAr2" name="etelAr2" min="1" max="999999" type="number" class="form-control" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <label class="input-group-text">Étel képe:</label>
+          </div>
+          <input id="etelKep" name="etelKep" type="file" class="form-control custom-file-input"
+                 aria-describedby="basic-addon1">
+        </div>
+      </form>
+    </div>
+    <div id="etelFormFooter">
+      <button id="etelMentes" class="btn btn-sm btn-success float-left"><span><i
+              class="fas fa-check mr-3 ml-2"></i></span><span>Étel rögzítése az étlapra</span></button>
+    </div>
+  </th:block>
+
+  <th:block th:replace="fragments/modal.html :: modal(kategoriaForm, ~{::#kategoriaFormTitle}, ~{::#kategoriaFormContent}, ~{::#kategoriaFormFooter})">
+    <div id="kategoriaFormTitle">
+      <h3>Kategória szerkesztése</h3>
+    </div>
+    <div id="kategoriaFormContent" class="card-body">
+      <input type="hidden" id="kategoriaId"/>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text">Kategória neve:</label>
+        </div>
+        <input id="kategoriaNev" type="text" class="form-control" aria-describedby="basic-addon1" required>
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text">Kategória priorítása:</label>
+        </div>
+        <input id="kategoriaPrio" type="number" class="form-control" aria-describedby="basic-addon1">
+      </div>
+    </div>
+    <div id="kategoriaFormFooter">
+      <button id="kategoriaMentes" class="btn btn-sm btn-success float-left"><span><i
+              class="fas fa-check mr-3 ml-2"></i></span><span>Kategória módosításának mentése</span></button>
+    </div>
+  </th:block>
+
+</div>
+<div id="scripts">
+  <script th:src="@{/js/admin/etlap.js}"></script>
+  <!--<script th:src="@{/assets/js/toastr.min.js}"></script>-->
+</div>
+</html>

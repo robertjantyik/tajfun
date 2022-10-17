@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="fragments/layout/asamiLayout.html :: asamiLayout(~{::title}, ~{::#content}, ~{::#scripts})">
+<title>Admin - Kapcsolat </title>
+<div id="content">
+    <div class="row mt-3">
+        <div class="col">
+            <div class="card mb-3">
+                <div class="card-header">
+                    <h3>Kapcsolat - Elérhetőségek</h3>
+                </div>
+                <div class="card-body">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Telefonszám:</span>
+                        </div>
+                        <input th:value="${kapcsolat.varositelefonszam}" id="varositelefonszam" type="text" class="form-control"  aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Mobil szám:</span>
+                        </div>
+                        <input th:value="${kapcsolat.mobilszam}" id="mobilszam" type="text" class="form-control"  aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Nyitvatartás:</span>
+                        </div>
+                        <input th:value="${kapcsolat.nyitvatartas}" id="nyitvatartas" type="text" class="form-control"  aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Cím:</span>
+                        </div>
+                        <input th:value="${kapcsolat.cim}" id="cim" type="text" class="form-control"  aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Email:</span>
+                        </div>
+                        <input th:value="${kapcsolat.email}" id="email" type="text" class="form-control"  aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Facebook profil:</span>
+                        </div>
+                        <input th:value="${kapcsolat.facebook}" id="facebook" type="text" class="form-control"  aria-describedby="basic-addon1">
+                    </div>
+                    <button id="kapcsolatMentesButton" class="btn btn-sm btn-success float-left"><span><i class="fas fa-check mr-3 ml-2"></i></span><span>Elérhetőségek frissítése</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="scripts">
+    <script th:src="@{/js/admin/kapcsolat.js}"></script>
+</div>
+</html>

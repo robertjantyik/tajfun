@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="fragments/layout/asamiLayout.html :: asamiLayout(~{::title}, ~{::#content}, ~{::#scripts})">
+<title>Admin - Heti ajánlat</title>
+<div id="content">
+    <input type="hidden" id="hetiajanlatId"/>
+    <div class="row mt-3 mb-3">
+        <div class="col mb-3">
+            <span><strong>Előző hetiajánlatok: </strong></span>
+            <div class="mb-3" id="hetiajanlatList"></div>
+            <button class="btn btn-sm btn-success float-left mr-2" id="newHetiajanlat" data-toggle="modal"><span><i
+                    class="fas fa-plus-square ml-2 mr-2"></i></span><span>Új hetiajánlat létrehozása</span>
+            </button>
+
+            <button class="btn btn-sm btn-primary float-left ml-2 mr-2" hidden id="hetiajanlatImport" data-toggle="modal"><span><i
+                    class="fas fa-copy ml-2 mr-2"></i></span><span>Hetiajánlat másolása</span>
+            </button>
+            <div class="col">
+                <button class="btn btn-sm btn-info float-left ml-2 mr-2" id="printHetiAjanlat" hidden><span><i class="fas fa-print ml-2 mr-2"></i></span>Hetiajánlat nyomtatása</button>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col">
+            <h3>Hétfő</h3>
+            <div class="mb-3" id="hetfoGrid"></div>
+            <button class="btn btn-sm btn-success float-left" disabled id="hetfoAdd" data-toggle="modal"><span><i
+                    class="fas fa-plus-square mr-2"></i></span><span>Étel hozzáadása</span>
+            </button>
+            <button class="btn btn-sm ml-2 mr-2 btn-danger float-right" disabled id="hetfoDelete"><span><i
+                    class="fas fa-trash-alt mr-2"></i></span><span>Étel törlése</span>
+            </button>
+        </div>
+        <div class="col">
+            <h3>Kedd</h3>
+            <div class="mb-3" id="keddGrid"></div>
+            <button class="btn btn-sm btn-success float-left" disabled id="keddAdd" data-toggle="modal"><span><i
+                    class="fas fa-plus-square mr-2"></i></span><span>Étel hozzáadása</span>
+            </button>
+            <button class="btn btn-sm ml-2 mr-2 btn-danger float-right" disabled id="keddDelete"><span><i
+                    class="fas fa-trash-alt mr-2"></i></span><span>Étel törlése</span>
+            </button>
+        </div>
+        <div class="col">
+            <h3>Szerda</h3>
+            <div class="mb-3" id="szerdaGrid"></div>
+            <button class="btn btn-sm btn-success float-left" disabled id="szerdaAdd" data-toggle="modal"><span><i
+                    class="fas fa-plus-square mr-2"></i></span><span>Étel hozzáadása</span>
+            </button>
+            <button class="btn btn-sm ml-2 mr-2 btn-danger float-right" disabled id="szerdaDelete"><span><i
+                    class="fas fa-trash-alt mr-2"></i></span><span>Étel törlése</span>
+            </button>
+        </div>
+        <div class="col">
+            <h3>Csütörtök</h3>
+            <div class="mb-3" id="csutortokGrid"></div>
+            <button class="btn btn-sm btn-success float-left" disabled id="csutortokAdd" data-toggle="modal"><span><i
+                    class="fas fa-plus-square mr-2"></i></span><span>Étel hozzáadása</span>
+            </button>
+            <button class="btn btn-sm ml-2 mr-2 btn-danger float-right" disabled id="csutortokDelete"><span><i
+                    class="fas fa-trash-alt mr-2"></i></span><span>Étel törlése</span>
+            </button>
+        </div>
+        <div class="col">
+            <h3>Péntek</h3>
+            <div class="mb-3" id="pentekGrid"></div>
+            <button class="btn btn-sm btn-success float-left" disabled id="pentekAdd" data-toggle="modal"><span><i
+                    class="fas fa-plus-square mr-2"></i></span><span>Étel hozzáadása</span>
+            </button>
+            <button class="btn btn-sm ml-2 mr-2 btn-danger float-right" disabled id="pentekDelete"><span><i
+                    class="fas fa-trash-alt mr-2"></i></span><span>Étel törlése</span>
+            </button>
+        </div>
+    </div>
+
+    <th:block th:insert="fragments/modal :: modal(eteladdModal, ~{::#etlapModalHeader}, ~{::#etlapModalContent}, ~{::#etlapModalFooter})">
+        <div id="etlapModalHeader">
+            <h3>Étel hozzáadása</h3>
+        </div>
+        <div id="etlapModalContent">
+                <form>
+                    <div class="form-group">
+                        <label for="kategoriaList">Kategória: </label>
+                        <div name="kategoriaList" id="kategoriaList"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="etelList">Étel: </label>
+                        <div name="etelList" id="etelList"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="etelNev">Étel neve: </label>
+                        <input class="form-control"  readonly id="etelNev"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="etelAr">Ára: </label>
+                        <input class="form-control" readonly id="etelAr"/>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="hidden" id="etelId"/>
+                        <input type="hidden" id="nap"/>
+                    </div>
+                </form>
+        </div>
+        <div id="etlapModalFooter">
+            <button id="modalEtelSubmitButton" class="btn btn-success">Hozzáadás</button>
+            <button id="modalEtelMegseButton" data-dismiss="modal" class="btn btn-danger">Mégse</button>
+        </div>
+    </th:block>
+
+    <th:block th:insert="fragments/modal :: modal(hetiajanlatModal, ~{::#hetiajanlatModalHeader}, ~{::#hetiajanalatModalContent}, ~{::#hetiajanlatModalFooter})">
+        <div id="hetiajanlatModalHeader">
+            <h3>Új hetiajánlat</h3>
+        </div>
+        <div id="hetiajanalatModalContent">
+            <div class="row">
+                <div class="col text-center">
+                    <div id="hetfoDatePicker"></div>
+                </div>
+            </div>
+        </div>
+        <div id="hetiajanlatModalFooter">
+            <button id="modalHetiajanlatSubmitButton" class="btn btn-success">Hozzáadás</button>
+            <button id="modalHetiajanlatMegseButton" data-dismiss="modal" class="btn btn-danger">Mégse</button>
+        </div>
+    </th:block>
+    <th:block th:insert="fragments/modal :: modal(hetiajanlatModalCopy, ~{::#hetiajanlatModalCopyHeader}, ~{::#hetiajanalatModalCopyContent}, ~{::#hetiajanlatModalCopyFooter})">
+        <div id="hetiajanlatModalCopyHeader">
+            <h3>Heti ajánlat másolásat</h3>
+        </div>
+        <div id="hetiajanalatModalCopyContent">
+            <div class="row">
+                <div class="col text-center">
+                    <div id="hetfoDatePickerCopy"></div>
+                </div>
+            </div>
+        </div>
+        <div id="hetiajanlatModalCopyFooter">
+            <button id="modalHetiajanlatCopySubmitButton" class="btn btn-success">Hozzáadás</button>
+            <button id="modalHetiajanlatCopyMegseButton" data-dismiss="modal" class="btn btn-danger">Mégse</button>
+        </div>
+    </th:block>
+</div>
+<div id="scripts">
+    <script th:src="@{/js/admin/hetiajanlat.js}"></script>
+</div>
+</html>

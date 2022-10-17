@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
-      th:replace="fragments/layout/asamiLayout.html :: asamiLayout(~{::title},~{::#contentheader}, ~{::#content}, ~{::#scripts})">
+      th:replace="fragments/layout/asamiLayout.html :: asamiLayout(~{::title}, ~{::#content}, ~{::#scripts})">
 <head>
     <meta charset="UTF-8">
     <title>Asami Restaurant Index</title>
     <link th:href="@{/assets/img/asami_logo.png}" rel="icon">
 </head>
 <body>
-    <section id="contentheader">
-        <div>CONTENT-HEADER</div>
-    </section>
     <section id="content">
         <div>CONTENT</div>
     </section>
